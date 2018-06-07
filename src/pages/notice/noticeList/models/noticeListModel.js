@@ -1,5 +1,4 @@
 import * as noticelistserver from '../seevers/noticeList'
-import * as test from '../../../users/services/users'
 export const namespace = 'noticelist'
 export default {
   namespace,
@@ -8,11 +7,18 @@ export default {
     a:'等我拿到mock的数据',
   },
   effects:{
-    *ceshi({payload},{call}){
-
+    *ceshi({payload},{call,put}){
+      const value = yield call(noticelistserver.ceshi);
+      yield put({type:'ceshireducer',value})
     }
   },
-  subscriptions:{
-
+  reducers:{
+    ceshireducer:(state,payload)=>{
+      let value = payload.value.data;
+      return {
+        ...state,
+        a:JSON.stringify(value),
+      }
+    }
   }
 }
