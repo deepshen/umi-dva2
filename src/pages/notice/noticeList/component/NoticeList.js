@@ -1,5 +1,5 @@
 import React,{PureComponent} from 'react'
-import {Button} from 'antd'
+import { Button } from 'antd'
 
 class NoticeList extends PureComponent {
   constructor(props){

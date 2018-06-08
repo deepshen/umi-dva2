@@ -7,4 +7,10 @@ export default {
   //     "pathRewrite": { "^/api" : "" }
   //   }
   // },
+  "theme":'./src/theme-config.js',
+  env: {
+    development: {
+      extraBabelPlugins: ['dva-hmr'],
+    },
+  },
 }
