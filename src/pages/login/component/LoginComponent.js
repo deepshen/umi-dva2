@@ -6,9 +6,6 @@ import router from 'umi/router'
 const FormItem = Form.Item;
 
 class Login extends PureComponent{
-  constructor(props){
-    super(props)
-  }
   login = () => {
     const {getFieldsValue} = this.props.form
     const value = getFieldsValue()

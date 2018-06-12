@@ -1,4 +1,4 @@
-import * as noticelistserver from '../seevers/noticeList'
+import * as noticelistserver from '../servers/noticeList'
 export const namespace = 'noticelist'
 export default {
   namespace,

@@ -2,7 +2,7 @@
 export default (props)=>{
   return (
     <div>
-      {props.children}
+      {props.children || null}
     </div>
   )
 }

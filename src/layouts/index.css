@@ -15,4 +15,5 @@
   background-color: #fff;
   border-radius: 5px;
   flex: 1 0 auto;
+  height: calc(100% - 20px);
 }

@@ -1,8 +1,9 @@
 import React,{PureComponent} from 'react';
-import {Layout, Menu} from 'antd'
+import {Layout, Menu,LocaleProvider} from 'antd'
+import zh_CN from 'antd/lib/locale-provider/zh_CN';
 import styles from './index.css';
-import Header from './Header';
 import Sider from './Sider'
+import Header from './Header'
 import withRouter from 'umi/withRouter';
 import Login from '../pages/login'
 
@@ -38,15 +39,18 @@ class MyLayout extends PureComponent{
       )
     }
     return (
-      <Layout className={styles.normal}>
-        <Sider {...siderProps} />
-        <Layout className={styles.content}>
+      <LocaleProvider locale={zh_CN}>
+        <Layout className={styles.normal}>
           <Header {...headerProps}/>
-          <Layout className={styles.main}>
-            {children}
+          <Layout className={styles.content}>
+            <Sider {...siderProps} />
+            <Layout className={styles.main}>
+              {children}
+            </Layout>
           </Layout>
         </Layout>
-      </Layout>
+      </LocaleProvider>
+
     );
   }
 }

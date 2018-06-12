@@ -9,6 +9,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.0.0-beta.49",
     "dva": "^2.1.0",
+    "rc-tree": "^1.12.0",
     "umi": "^1.0.0-0",
     "umi-plugin-dva": "^0.1.5"
   },

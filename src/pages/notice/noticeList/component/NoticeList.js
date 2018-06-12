@@ -2,9 +2,6 @@ import React,{PureComponent} from 'react'
 import { Button } from 'antd'
 
 class NoticeList extends PureComponent {
-  constructor(props){
-    super(props)
-  }
   ceshi = () => {
     const {dispatch} = this.props
     dispatch({type:'noticelist/ceshi'})

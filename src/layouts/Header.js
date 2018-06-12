@@ -1,5 +1,4 @@
 import {Layout,Icon} from 'antd';
-import Link from 'umi/link';
 import styles from './header.less'
 const {Header} = Layout
 function MyHeader({ location,collapsed,toggle }) {
